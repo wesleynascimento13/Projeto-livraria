@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Estilos para produtos */
+.product {
+    border: 1px solid #ccc;
+    padding: 70px;
+    width: 200px; /* ou qualquer largura desejada */
+    margin-bottom: 20px; /* ou qualquer margem desejada */
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.price {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0px;
+    margin-top: 0px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.header {
+    align-items: center;
+}
+
+.categories {
+    margin-right: 400px;
+}
+
+.store-name {
+    margin-right: 20px;
+}
+
+.navigation {
+    margin-left: auto;
+}
+.product-container {
+    display: flex;
+    justify-content: flex-start; 
+}
+.quebra-linha {
+    white-space: pre-line;
+    line-height: 8.5; /* diminui o espaço entre as linhas para o tamanho normal do texto */
+}
+
+.marvel-products .product img {
+    display: block;
+    margin: 0 auto; /* Isso centraliza a imagem horizontalmente */
+}
+
+.marvel-products .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.marvel-products .product h3 {
+    margin-top: 10px;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px; /* Defina o máximo de largura para o formulário conforme necessário */
+}
+
+.contact form label {
+    width: 100px; /* Largura fixa para os rótulos */
+    margin-bottom: 10px; /* Espaçamento inferior entre os rótulos */
+}
+
+.contact form input[type="text"],
+.contact form input[type="email"],
+.contact form textarea {
+    width: calc(100% - 110px); /* Largura dos campos de entrada e área de texto com base na largura total menos a largura dos rótulos */
+    padding: 5px; /* Adicione algum preenchimento para os campos de entrada e área de texto */
+    margin-bottom: 10px; /* Espaçamento inferior entre os campos */
+}
+
+.contact form button[type="submit"] {
+    width: 75%; /* Botão de largura total */
+    padding: 10px; /* Adicione algum preenchimento para o botão */
+}
+.contact-section {
+    margin-bottom: 50px; /* Você pode ajustar o valor conforme necessário */
+}
+
