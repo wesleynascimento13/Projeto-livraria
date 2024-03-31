@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiverso Nerd</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    
+</head>
+<body class="horizontal">
+
+    <header class="header">
+        <div class="title-and-nav">
+            <h1 class="store-name">Multiverso Nerd</h1>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="livros.html">Livros</a></li>
+                    <li><a href="quadrinhos.html">Quadrinhos</a></li>
+                    <li><a href="#">Carrinho</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Pesquisar...">
+        <button id="botaoPesquisar" onclick="search()">
+            <img src="../Imagens/lupa de pesquisa.png" width="20" height="20" alt="Pesquisar">
+        </button>
+    </div>
+    
+    <section class="margem_lateral" id="Marvel_section">
+        <h2>Marvel</h2>
+        <div class="product-container">
+            <div class="product" id="Vingadores_2ª_Série_n°_1">
+                <img src="../Quadrinhos/Marvel/Vingadores 1.png" width="142" height="300" alt="Product 2" class="margem_topo">
+                <h3>Vingadores, Os 2ª Série - n° 1</h3>
+                <p>Após as Guerras Secretas, os heróis da Marvel se dividem em dois grupos: os novos Vingadores e os Novos Vingadores, com diferentes composições e sob vigilância da SHIELD. O cenário promete ação e intriga, com desafios inesperados para os heróis.</p>
+                <span class="price quebra-linha">R$25,00</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="Vingadores_Assuntos_de_Família">
+                <img src="../Quadrinhos/Marvel/Vingadores 2 Assuntos de família.png" width="148" height="300" alt="Product 2" class="margem_topo">
+                <h3>Vingadores Assuntos de Família</h3>
+                <p>Na HQ "Vingadores: Assuntos de Família", a filha de Hank Pym é sequestrada, levando os Vingadores a confrontar segredos do passado, gerando tensões internas. Eles precisam unir forças para resgatá-la e preservar o legado da equipe.</p>
+                <span class="price quebra-linha">R$60,00</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="Vingadores_3_A_Origem_Secreta_do_Universo">
+                <img src="../Quadrinhos/Marvel/Vingadores 3 A Origem Secreta do Universo.png" width="142" height="300" alt="Product 2" class="margem_topo">
+                <h3>Vingadores 3 A Origem Secreta do Universo</h3>
+                <p>Em "Vingadores 3: A Origem Secreta do Universo", os heróis investigam os mistérios cósmicos, confrontam ameaças e descobrem segredos sobre a criação do universo e seu papel nele.</p>
+                <span class="price quebra-linha">R$9,90</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="Viuva_Negra_Laços_Que_Unem">
+                <img src="../Quadrinhos/Marvel/Viúva-Negra 1 Laços Que Unem.png" width="142" height="300" alt="Product 2" class="margem_topo">
+                <h3>Viuva Negra Laços Que Unem</h3>
+                <p>A nova série da Viúva-Negra, escrita por Kelly Thompson e ilustrada por Elena Casagrande, acompanha Natasha Romanoff em um mistério que redefine sua vida como espiã no Universo Marvel.</p>
+                <span class="price quebra-linha">R$49,90</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="Feiticeira_Escarlate_(2023)_n°1">
+                <img src="../Quadrinhos/Marvel/Feiticeira Escarlate.png" width="142" height="300" alt="Product 2" class="margem_topo">
+                <h3>Feiticeira Escarlate (2023) n°1</h3>
+                <p>Wanda Maximoff, a Feiticeira Escarlate, abre uma porta para uma mulher com uma história assustadora sobre uma cidade enlouquecida e usa sua magia do caos para enfrentar a ameaça.</p>
+                <span class="price quebra-linha">R$7,90</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="margem_lateral" id="DC_section">
+        <h2>DC</h2>
+        <div class="product-container">
+            <div class="product" id="Superman_Entre_a_Foice_e_o_Martelo">
+                <img src="../Quadrinhos/DC/superman-entre-a-foice-e-o-martelo.jpg" width="150" height="300"  alt="Product 2" class="margem_topo">
+                <h3>Superman Entre a Foice e o Martelo</h3>
+                <p>"Superman: Red Son" reimagina Kal-El como um herói comunista na União Soviética, enfrentando versões alternativas de heróis e líderes políticos em uma minissérie aclamada e republicada pela Panini no Brasil.</p>
+                <span class="price quebra-linha">R$62,90</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="Batman_à_Caça_da_Besta">
+                <img src="../Quadrinhos/DC/Batman.png" width="142" height="300" alt="Product 2" class="margem_topo">
+                <h3>Batman à caça da besta</h3>
+                <p>Batman confronta KGBesta em uma guerra fria crescente, descobrindo mais envolvidos nos ataques, determinado a desvendar os motivos por trás de tudo.</p>
+                <span class="price quebra-linha">R$39,99</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="Besouro_Azul_Confronto_Final">
+                <img src="../Quadrinhos/DC/Blue Beatle.png" width="142" height="300" alt="Product 2" class="margem_topo">
+                <h3>Besouro Azul confronto final?</h3>
+                <p>Jaime Reyes, sem memória, retorna à cidade controlada pelo governo em busca de sua família, desvendando segredos das Indústrias Kord para revelar a verdade oculta.</p>
+                <span class="price quebra-linha">R$10,90</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="Mulher_Maravilha">
+                <img src="../Quadrinhos/DC/Wonderful Woman.png" width="142" height="300" alt="Product 2" class="margem_topo">
+                <h3>Mulher Maravilha</h3>
+                <p>Mulher-Maravilha confronta Donna Troy, que tenta roubar seus títulos. Após uma segunda chance, Donna foge, causando problemas. Mulher-Maravilha precisa detê-la.</p>
+                <span class="price quebra-linha">R$209,79</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="Lanterna_Verde_Ofensiva_Esmeralda">
+                <img src="../Quadrinhos/DC/Green Lantern.png" width="142" height="300" alt="Product 2" class="margem_topo">
+                <h3>Lanterna Verde ofensiva esmeralda</h3>
+                <p>Hal Jordan lidera busca pelo Corpo de Lanternas Verdes; Sinestro celebra vitória no antigo centro do universo, onde Oa estava.</p>
+                <span class="price quebra-linha">R$14,00</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="margem_lateral" id="Star_Wars_section">
+        <h2>Star Wars</h2>
+        <div class="product-container">
+            <div class="product" id="Star_Wars_C-3PO">
+                <img src="../Quadrinhos/Star Wars/Star Wars  C-3PO.png" width="142" height="300" alt="Product 2" class="margem_topo">
+                <h3>Star Wars C-3PO</h3>
+                <p>Descubra a jornada de Threepio até Star Wars: O Despertar da Força e como ele adquiriu seu braço vermelho. Com a equipe de James Robinson e Tony Harris, este especial é essencial para os fãs, prometendo uma narrativa única.</p>
+                <span class="price quebra-linha">R$7,90</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="Star_Wars_Yoda's_Secret_War">
+                <img src="../Quadrinhos/Star Wars/Star Wars Yoda's Secret War.png" width="142" height="300" alt="Product 2" class="margem_topo">
+                <h3>Star Wars Yoda's Secret War</h3>
+                <p>Com um membro da tripulação rebelde capturado e aprisionado, voltamos mais uma vez aos diários de Ben Kenobi e uma aventura lendária com o Mestre Jedi... Yoda!</p>
+                <span class="price quebra-linha">R$59,97</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="Star_Wars_Chewbacca">
+                <img src="../Quadrinhos/Star Wars/Star Wars Chewbacca.png" width="142" height="300" alt="Product 2" class="margem_topo">
+                <h3>Star Wars Chewbacca</h3>
+                <p>A coleção "Chewbacca" de 2004 reúne histórias póstumas sobre o lendário Wookiee, contadas por Lando, Leia, Han e Luke, oferecendo vislumbres da cultura dos Wookiees e homenageando o personagem após sua morte heroica em "Vector Prime".</p>
+                <span class="price quebra-linha">R$41,90</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="Star_Wars_Darth_Vader">
+                <img src="../Quadrinhos/Star Wars/Star Wars Darth Vander.png" width="147" height="300" alt="Product 2" class="margem_topo">
+                <h3>Star Wars Darth Vader</h3>
+                <p>Caçadores de recompensas desafiam o Império, enquanto Vader recebe uma missão em conflito com seus próprios objetivos. Enquanto ele enfrenta esse dilema, um novo agente misterioso de Tagge surge.</p>
+                <span class="price quebra-linha">R$32,71</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="Star_Wars_Kanan_the_Last_Padawan">
+                <img src="../Quadrinhos/Star Wars/Star Wars Kanan o último Padawan.png" width="140" height="300" alt="Product 2" class="margem_topo">
+                <h3>Star Wars Kanan the Last Padawan</h3>
+                <p>Descubra a jornada de Threepio até Star Wars: O Despertar da Força e como ele adquiriu seu braço vermelho. Com a equipe de James Robinson e Tony Harris, este especial é essencial para os fãs, prometendo uma narrativa única.</p>
+                <span class="price quebra-linha">R$39,90</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <footer>
+        <p>&copy; 2024 Multiverso Nerd | Wesley Nascimento & Julia Rodrigues 
+            <a href="https://www.facebook.com/profile.php?id=100051967600355" target="_blank" rel="external"><img src="../Imagens/Facebook.png" alt="ícone facebook" class="icon_facebook_01" width="20" height="20"></a>
+            <a href="" target="_blank" rel="external"><img src="../Imagens/Facebook.png" alt="ícone facebook" class="icon_facebook_02" width="20" height="20"></a>
+            <a href="https://www.instagram.com/wesley.vnascimento/" target="_blank" rel="external"><img src="../Imagens/Instagram.png" alt="ícone instagram" class="icon_instagram_01" width="20" height="20"></a>
+            <a href="https://www.instagram.com/_juuh27_/" target="_blank" rel="external"><img src="../Imagens/Instagram.png" alt="ícone instagram" class="icon_instagram_02" width="20" height="20"></a>
+        </p>
+    </footer>
+    
+    <script src="../JavaScript/index.js"></script>
+    
+</body>
+</html>

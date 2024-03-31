@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiverso Nerd</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body class="horizontal_vertical">
+    
+    <header class="header">
+        <div class="title-and-nav">
+            <h1 class="store-name">Multiverso Nerd</h1>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="livros.html">Livros</a></li>
+                    <li><a href="quadrinhos.html">Quadrinhos</a></li>
+                    <li><a href="carrinho.html">Carrinho</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Pesquisar...">
+            <button id="botaoPesquisar" onclick="search()">
+                <img src="../Imagens/lupa de pesquisa.png" width="20" height="20" alt="Pesquisar">
+            </button>
+        </div>
+  
+    
+    <section class="margem_lateral">
+        <h2>Mais Vendidos</h2>
+        <div class="product-container">
+            <div class="product" id="harry_potter_relíquias_morte">
+                <img src="../Livros/Harry Potter e as Relíquias da Morte.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
+                <h3>Harry Potter e as Relíquias da Morte</h3>
+                <p>Em "Harry Potter e as Relíquias da Morte", Harry busca e destrói as Horcruxes de Voldemort com a ajuda de seus amigos, enquanto descobre e utiliza as Relíquias da Morte para enfrentar o lorde das trevas.</p>
+                <span class="price quebra-linha">R$37,90</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="superman_foice_martelo">
+                <img src="../Quadrinhos/DC/superman-entre-a-foice-e-o-martelo.jpg" width="142" height="300" alt="Product 2 " class="margem_topo">
+                <h3>Superman entre a foice e o martelo</h3>
+                <p>
+                    "Superman: Red Son" reimagina Kal-El como um herói comunista na União Soviética, enfrentando versões alternativas de heróis e líderes políticos em uma minissérie aclamada e republicada pela Panini no Brasil.
+                </p>
+                <span class="price quebra-linha">R$62,90</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="star_wars_c3po">
+                <img src="../Quadrinhos/Star Wars/Star Wars  C-3PO.png" width="130" height="300" alt="Product 2" class="margem_topo">
+                <h3>Star Wars C-3PO</h3>
+                <p>Descubra a jornada de Threepio até Star Wars: O Despertar da Força e como ele adquiriu seu braço vermelho. Com a equipe de James Robinson e Tony Harris, este especial é essencial para os fãs, prometendo uma narrativa única.</p>
+                <span class="price quebra-linha">R$7,90</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="o_hobbit">
+                <img src="../Livros/O Hobbit.jpeg" width="125" height="300" alt="Product 2" class="margem_topo">
+                <h3>O Hobbit</h3>
+                <p class="with-space">
+                    Bilbo Bolseiro se junta a Thorin e outros anões em uma jornada épica para retomar Erebor do dragão Smaug, enfrentando perigos como Goblins, Orcs e a criatura Gollum, cujo anel tem um poder que moldará o destino da Terra Média.
+                </p> 
+                <span class="price quebra-linha">R$53,80</span>
+                <button class="add-to-cart ">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="aventuras_sherlock_holmes">
+                <img src="../Livros/As aventuras de Sherlock Holmes.jpg" width="135" height="300" alt="Product 2" class="margem_topo">
+                <h3>As aventuras de Sherlock Holmes</h3>
+                <p>
+                    O volume reúne os doze primeiros contos de Sherlock Holmes, publicados entre julho de 1891 e junho de 1892 na revista Strand Magazine, incluindo histórias famosas como "A Liga dos Cabeças Vermelhas" e "Escândalo na Boêmia".
+                </p>
+                <span class="price quebra-linha">R$21,00</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+    
+    
+    <footer>
+        <p>&copy; 2024 Multiverso Nerd | Wesley Nascimento & Julia Rodrigues 
+            <a href="https://www.facebook.com/profile.php?id=100051967600355" target="_blank" rel="external"><img src="../Imagens/Facebook.png" alt="ícone facebook" class="icon_facebook_01" width="20" height="20"></a>
+            <a href="" target="_blank" rel="external"><img src="../Imagens/Facebook.png" alt="ícone facebook" class="icon_facebook_02" width="20" height="20"></a>
+            <a href="https://www.instagram.com/wesley.vnascimento/" target="_blank" rel="external"><img src="../Imagens/Instagram.png" alt="ícone instagram" class="icon_instagram_01" width="20" height="20"></a>
+            <a href="https://www.instagram.com/_juuh27_/" target="_blank" rel="external"><img src="../Imagens/Instagram.png" alt="ícone instagram" class="icon_instagram_02" width="20" height="20"></a>
+
+        </p>
+    </footer>
+    
+    <script src="../JavaScript/index.js"></script>
+
+</body>
+</html>
