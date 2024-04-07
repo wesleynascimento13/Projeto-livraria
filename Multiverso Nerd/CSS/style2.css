@@ -1,0 +1,309 @@
+
+
+body {
+  font-family: Arial, sans-serif; /* Define a fonte padrão para o corpo do documento */
+  margin: 0px; /* Remove margens externas */
+  padding: 0; /* Remove preenchimento */
+  margin-bottom: 100px; /* Adiciona margem inferior de 100 pixels */
+  background-color: #bfeef3;
+  color: black; /* Define a cor do texto como preto */
+  font-size: 15px; /* Define o tamanho da fonte para 16 pixels */
+  
+}
+
+
+header {
+  background-color:rgb(166, 5, 5); /* Define a cor de fundo */
+  color: #fff; /* Define a cor do texto */
+  padding: 1px; /* Adiciona preenchimento */
+  text-align: center; /* Centraliza o texto */
+}
+
+header nav ul {
+  list-style: none; /* Remove os estilos padrão da lista */
+  padding: 0; /* Remove preenchimento da lista */
+}
+
+header nav ul li {
+  display: inline; /* Exibe os itens da lista em linha */
+  margin-right: 20px; /* Adiciona margem direita entre os itens */
+}
+
+header nav ul li a {
+  color: #fff; /* Define a cor do link */
+  text-decoration: none; /* Remove a decoração de link */
+}
+
+
+button[type="submit"] {
+  background-color: rgb(198, 10, 10); /* Define a cor de fundo do botão de envio */
+  color: #fff; /* Define a cor do texto do botão */
+  border: none; /* Remove a borda do botão */
+  padding: 8px 16px; /* Adiciona preenchimento ao botão */
+  cursor: pointer; /* Adiciona o cursor de apontar */
+}
+
+button[type="submit"]:hover {
+  background-color: #800000; /* Define a cor de fundo ao passar o mouse sobre o botão de envio */
+}
+
+
+/* Estilos adicionais */
+.header {
+  align-items: center; /* Centraliza os itens verticalmente */
+  width: 100%; /* Define a largura total */
+}
+
+
+.container {
+  max-width: 800px; /* Define a 
+  largura máxima */
+  margin: 15px auto; /* Adiciona margem */
+  padding: 10px; /* Adiciona preenchimento */
+  background-color: #fff; /* Define a cor de fundo */
+  border-radius: 5px; /* Adiciona borda arredondada */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+  min-height: 500px;
+  margin-top: 90px;
+}
+
+h1 {
+  text-align: center; /* Centraliza o texto */
+}
+
+.form-group {
+  margin-bottom: 5px; /* Adiciona margem inferior */
+}
+
+.form-group label {
+  display: block; /* Exibe os rótulos como blocos */
+  margin-bottom: 5px; /* Adiciona margem inferior */
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 99%;
+  padding: 5px; /* Reduz o preenchimento para ajustar ao novo tamanho da fonte */
+  margin-top: 1px;
+  margin-bottom: 1px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 14px; /* Define o tamanho da fonte para 14 pixels */
+  height: 40px; /* Reduz a altura da caixa de texto */
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px; /* Define o tamanho da fonte para 14 pixels */
+}
+
+#response-message {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 14px; /* Define o tamanho da fonte para 14 pixels */
+}
+
+.horizontal_vertical{
+  overflow: hidden;
+}
+
+.horizontal{
+  overflow-x: hidden;
+}
+/* Estilos para o rodapé */
+footer {
+  background-color: rgb(166, 5, 5); /* Define a cor de fundo do rodapé */
+  color: #fff; /* Define a cor do texto */
+  margin-top: 77px; /* Adiciona margem superior */
+  margin-bottom: -5000px; /* Adiciona margem superior */
+  width: 100%; /* Define a largura total */
+  height: 3vh
+}
+
+.icon_instagram_01 {
+  margin-right: 4px; /* Adicione um espaçamento entre as imagens se necessário */
+  
+  float: right;
+}
+.icon_instagram_02 {
+  margin-right: 5px; /* Adicione um espaçamento entre as imagens se necessário */
+  float: right;
+}
+
+.icon_facebook_01 {
+  margin-right:30px;
+  float: right;
+}
+.icon_facebook_02 {
+  margin-right: 5px;
+  float: right;
+}
+
+.icon_linkedin_01 {
+  margin-right: 5px;
+  float: right;
+}
+.icon_linkedin_02 {
+  margin-right: 5px;
+  float: right;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Centraliza o parágrafo */
+p {
+  margin: 0;
+}
+
+/* Centraliza o parágrafo dentro da div */
+.copyright {
+  text-align: center;
+  margin-left: 175px;
+}
+
+
+.search-container {
+  float: right; /* Posiciona o contêiner à direita */
+  margin-right: 20px; /* Adiciona uma margem direita para espaçamento */
+}
+
+.search-container input[type=text] {
+  padding: 0px;
+  width: 50%;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.search-container button {
+  padding: 0px 0px;
+  background-color: #bfeef3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 0px;
+  display: inline-block;
+  margin-top: 1px;
+}
+.margem_lateral{
+  margin: 30px;
+}
+.margem_topo{
+margin-top: 20px;
+}
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+ 
+  body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão para o corpo do documento */
+    margin: 0px; /* Remove margens externas */
+    padding: 0; /* Remove preenchimento */
+    margin-bottom: 100px; /* Adiciona margem inferior de 100 pixels */
+    background-color: #bfeef3;
+    color: black; /* Define a cor do texto como preto */
+    font-size: 15px; /* Define o tamanho da fonte para 16 pixels */
+    overflow: hidden; /* remova a propriedade overflow: hidden */
+  }
+
+  .container {
+    max-width: 400px; /* Define a 
+    largura máxima */
+    margin: 15px auto; /* Adiciona margem */
+    padding: 1px; /* Adiciona preenchimento */
+    background-color: #fff; /* Define a cor de fundo */
+    border-radius: 5px; /* Adiciona borda arredondada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    min-height: 100px;
+    max-height: 500px;
+    margin-top: 40px;
+  }
+
+  input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 99%;
+  padding: 3px; /* Reduz o preenchimento para ajustar ao novo tamanho da fonte */
+  margin-top: 1px;
+  margin-bottom: 1px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 10px; /* Define o tamanho da fonte para 14 pixels */
+  height: 40px; /* Reduz a altura da caixa de texto */
+}
+
+  footer {
+    background-color: rgb(166, 5, 5); /* Define a cor de fundo do rodapé */
+    color: #fff; /* Define a cor do texto */
+    margin-top: 24px; /* Adiciona margem superior */
+    width: 100%; /* Define a largura total */
+    height: 5vh
+   
+  }
+
+  .copyright {
+    text-align: center;
+    margin-left: 1px;
+    font-size: 10px;
+    
+  }
+
+
+}
+
+.icon_linkedin_01 {
+  margin-right: 5px;
+  float: right;
+}
+.icon_linkedin_02 {
+  margin-right: 5px;
+  float: right;
+}
+
+#fade,
+#modal {
+opacity: 1;
+transition: .5s;
+}
+
+#fade {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(51, 51, 51, 0.7);
+z-index: 2;
+}
+
+:root {
+--cor-navbar: #e2ff9f;
+--cor-button: #ade528;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.category-title{
+  margin-bottom: 10px;
+}
+
+
+
+

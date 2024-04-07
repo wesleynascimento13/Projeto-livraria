@@ -2,168 +2,228 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
     <title>Multiverso Nerd</title>
-    <link rel="stylesheet" href="../CSS/styles.css">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <script src="../JavaScript/script.js" defer></script>
 </head>
-<body class="horizontal">
 
-    <header class="header">
-        <div class="title-and-nav">
-            <h1 class="store-name">Multiverso Nerd</h1>
-            <nav class="navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="livros.html">Livros</a></li>
-                    <li><a href="quadrinhos.html">Quadrinhos</a></li>
-                    <li><a href="#">Carrinho</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body id="start" class="horizontal">
 
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Pesquisar...">
-        <button id="botaoPesquisar" onclick="search()">
-            <img src="../Imagens/lupa de pesquisa.png" width="20" height="20" alt="Pesquisar">
-        </button>
+  <div id="fade" class="hide"></div>
+  <div id="modal" class="hide">
+    <div id="tela-pedidos">
+      <h2>PRODUTOS</h2>
+      <img src="images/close-icon.png" alt="" id="fechar-modal">
+      <br>
+      <hr>
+      <div id="pedidos"></div>
     </div>
-    
-    <section class="margem_lateral" id="jrr_tolkien_section">
-        <h2>J.R.R. Tolkien</h2>
-        <div class="product-container">
-            <div class="product" id="Senhor_dos_aneis_A_Sociedade_do_Anel">
-                <img src="../Livros/a sociedade do anel capa os aneis de poder.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
-                <h3>Senhor dos Anéis: A Sociedade do Anel</h3>
-                <p class="with-space">A jornada da Sociedade do Anel começa no Condado, quando Frodo Bolseiro herda o Um Anel de seu tio Bilbo. Eles embarcam em uma perigosa missão para destruir o anel e derrotar Sauron, unindo-se a outros representantes dos Povos Livres.</p> 
-                <span class="price quebra-linha">R$32,90</span>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product" id="Senhor_dos_aneis_As_Duas_Torres">
-                <img src="../Livros/senhor dos aneis 2.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
-                <h3>Senhor dos Anéis: As Duas Torres</h3>
-                <p>Após um ataque-surpresa, a Sociedade do Anel se separa. Enquanto Aragorn, Legolas e Gimli buscam resgatar Merry e Pippin, Frodo e Sam contam com a ajuda improvável de Gollum para chegar a Mordor e destruir o Um Anel.</p> 
-                <span class="price quebra-linha">R$53,82</span>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product" id="Senhor_dos_Aneis_O_Retorno_do_Rei">
-                <img src="../Livros/senhor dos aneis 3.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
-                <h3>Senhor dos Anéis: O Retorno do Rei</h3>
-                <p>No livro "O Retorno do Rei", Gandalf e Pippin visitam a cidade de Minas Tirith, enquanto outros membros da Sociedade do Anel se unem a Aragorn para proteger Gondor da ameaça de Sauron.</p>
-                <span class="price quebra-linha">R$50,68</span>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product" id="O_Hobbit">
-                <img src="../Livros/O Hobbit.jpeg" width="142" height="300" alt="Product 2" class="margem_topo">
-                <h3>O Hobbit</h3>
-                <p class="with-space">Bilbo Bolseiro se junta a Thorin e outros anões em uma jornada épica para retomar Erebor do dragão Smaug, enfrentando perigos como Goblins, Orcs e a criatura Gollum, cujo anel tem um poder que moldará o destino da Terra Média.</p> 
-                <span class="price quebra-linha">R$53,80</span>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product" id="A_Queda_de_Numenor">
-                <img src="../Livros/A Queda de Númenor.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
-                <h3>A Queda de Númenor</h3>
-                <p class="with-space">O livro narra a queda de Numenor e o surgimento da Terra-média, cenário de "O Senhor dos Anéis", com uma mistura emocionante de ação, aventura e reflexão sobre ambição, poder e redenção.</p> 
-                <span class="price quebra-linha">R$36,90</span>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
+    <hr>
+    <div id="valor-total">
+      <p>Total :</p>
+    </div>
+    <hr>
+    <div id="btn-pagar">
+      <button id="btn-limpar">Limpar</button>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="title-and-nav">
+        <h1 class="store-name">Multiverso Nerd</h1>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="livros.html">Livros</a></li>
+                <li><a href="quadrinhos.html">Quadrinhos</a></li>
+                <li><a href="#" id="abrir-modal">Carrinho</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Pesquisar...">
+  <button id="botaoPesquisar" onclick="search()">
+      <img src="../Imagens/lupa de pesquisa.png" width="20" height="20" alt="Pesquisar">
+  </button>
+</div>
+
+  <main>
+
+    <section class="margem_lateral">
+      <h2 class="category-title">J.R.R. Tolkien</h2>
+
+      <div class="livros product-container">
+
+        <div class="product">
+          <img src="../Livros/a sociedade do anel capa os aneis de poder.jpg" width="142" height="300" alt="Product 1" class="margem_topo">
+          <h3 class="title">Senhor dos Anéis: A Sociedade do Anel</h3>
+          <p class="synopsis">A jornada da Sociedade do Anel começa no Condado, quando Frodo Bolseiro herda o Um Anel de seu tio Bilbo. Eles embarcam em uma perigosa missão para destruir o anel e derrotar Sauron, unindo-se a outros representantes dos Povos Livres.</p>
+          <span class="price quebra-linha">R$32,90</span>
+          <button class="add-to-cart" id="Senhor_dos_aneis_A_Sociedade_do_Anel">Adicionar ao Carrinho</button>
         </div>
-    </section>
-    
-    <section class="margem_lateral" id="sherlock_holmes_section">
-        <h2>Sherlock Holmes</h2>
-        <div class="product-container">
-            <div class="product" id="Sherlock_Holmes_Um_estudo_em_vermelho">
-                <img src="../Livros/Sherlock Holmes 1.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
-                <h3>Sherlock Holmes - Um estudo em vermelho</h3>
-                <p>Holmes é chamado para solucionar o caso de um homem que foi encontrado morto, com uma expressão de terror, mas que não apresenta ferimentos, apenas manchas de sangue pelo corpo.</p><br> 
-                <span class="price quebra-linha">R$38,32</span>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product" id="Sherlock_Holmes_O_signo_dos_quatro">
-                <img src="../Livros/Sherlock Holmes - O signo dos quatro.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
-                <h3>Sherlock Holmes - O signo dos quatro</h3>
-                <p>Holmes é procurado por Mary Morstan para descobrir o que aconteceu com seu pai que morreu há dez anos. Começa uma investigação, e, acompanhado do dr. Watson Holmes se depara com curiosas pistas.</p>
-                <span class="price quebra-linha">R$38,32</span>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product" id="Sherlock_Holmes_O_Vale_do_Medo">
-                <img src="../Livros/O Vale do Medo.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
-                <h3>Sherlock Holmes - O Vale do Medo</h3>
-                <p>Em "O Vale do Medo", Sherlock Holmes e Watson decifram um bilhete criptografado sobre um assassinato, iniciando uma busca pela solução do crime. A história é eletrizante, com um desfecho surpreendente.</p>
-                <span class="price quebra-linha">R$34,42</span>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product" id="Sherlock_Holmes_O_cao_dos_Baskerville">
-                <img src="../Livros/Sherlock Holmes - O cão dos Baskerville.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
-                <h3>Sherlock Holmes - O cão dos Baskerville</h3>
-                <p>Holmes investiga a morte do milionário Sir Charles Baskerville que foi encontrado em um pântano próximo a sua casa. Uma lenda local dizia que ele foi assassinado por um cão que assombrava a região. Será isso mesmo?</p>
-                <span class="price quebra-linha">R$22,47</span>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product" id="As_aventuras_de_Sherlock_Holmes">
-                <img src="../Livros/As aventuras de Sherlock Holmes.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
-                <h3>As aventuras de Sherlock Holmes</h3>
-                <p>O volume reúne os doze primeiros contos de Sherlock Holmes, publicados entre julho de 1891 e junho de 1892 na revista Strand Magazine, incluindo histórias famosas como "A Liga dos Cabeças Vermelhas" e "Escândalo na Boêmia".</p>
-                <span class="price quebra-linha">R$21,00</span>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
+
+        <div class="product">
+          <img src="../Livros/senhor dos aneis 2.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
+          <h3 class="title">Senhor dos Anéis: As Duas Torres</h3>
+          <p class="synopsis">Após um ataque-surpresa, a Sociedade do Anel se separa. Enquanto Aragorn, Legolas e Gimli buscam resgatar Merry e Pippin, Frodo e Sam contam com a ajuda improvável de Gollum para chegar a Mordor e destruir o Um Anel.</p>
+          <span class="price quebra-linha">R$53,82</span>
+          <button class="add-to-cart" id="Senhor_dos_aneis_As_Duas_Torres">Adicionar ao Carrinho</button>
         </div>
-    </section>
-    
-    <section class="margem_lateral" id="harry_potter_section">
-        <h2>Harry Potter</h2>
-        <div class="product-container">
-            <div class="product" id="Harry_Potter_e_a_Pedra_Filosofal">
-                <img src="../Livros/Harry Potter e a Pedra Filosofal.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
-                <h3>Harry Potter e a Pedra Filosofal</h3>
-                <p>Harry Potter, um garoto órfão maltratado pelos tios, descobre aos 11 anos sua herança mágica e destino de enfrentar o bruxo das trevas que matou seus pais, tornando-se um símbolo de poder e resistência no mundo dos feiticeiros.</p>
-                <span class="price quebra-linha">R$38,42</span>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product" id="Harry_Potter_e_a_Câmara_Secreta">
-                <img src="../Livros/Harry Potter e a Câmara Secreta.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
-                <h3>Harry Potter e a Câmara Secreta</h3>
-                <p>Harry Potter enfrenta novos desafios em seu retorno a Hogwarts após férias desanimadoras, contando com a ajuda dos amigos para enfrentar uma ameaça misteriosa que perturba a escola.</p>
-                <span class="price quebra-linha">R$36,48</span>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product" id="Harry_Potter_e_o_Prisioneiro_de_Azkaban">
-                <img src="../Livros/Harry Potter e o Prisioneiro de Azkaban.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
-                <h3>Harry Potter e o Prisioneiro de Azkaban</h3>
-                <p>Harry Potter ansioso para retornar a Hogwarts, onde encontra velhos amigos e novos desafios, incluindo a presença do misterioso professor Lupin.</p>
-                <span class="price quebra-linha">R$57,67</span>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product" id="Harry_Potter_e_a_Ordem_da_Fênix">
-                <img src="../Livros/Harry Potter e a Ordem da Fênix.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
-                <h3>Harry Potter e a Ordem da Fênix</h3>
-                <p>No quinto livro da saga, Harry Potter enfrenta a pressão da fama, a perseguição da imprensa e descobre mais sobre sua sexualidade enquanto enfrenta Voldemort sem a proteção de Dumbledore e desvenda segredos sobre seu pai e a perda de um ente querido.</p>
-                <span class="price quebra-linha">R$43,90</span>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-            <div class="product" id="Harry_Potter_e_as_Relíquias_da_Morte">
-                <img src="../Livros/Harry Potter e as Relíquias da Morte.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
-                <h3>Harry Potter e as Relíquias da Morte</h3>
-                <p>Em "Harry Potter e as Relíquias da Morte", Harry busca e destrói as Horcruxes de Voldemort com a ajuda de seus amigos, enquanto descobre e utiliza as Relíquias da Morte para enfrentar o lorde das trevas.</p>
-                <span class="price quebra-linha">R$37,90</span>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
+
+        <div class="product">
+          <img src="../Livros/senhor dos aneis 3.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
+          <h3 class="title">Senhor dos Anéis: O Retorno do Rei</h3>
+          <p class="synopsis">No livro "O Retorno do Rei", Gandalf e Pippin visitam a cidade de Minas Tirith, enquanto outros membros da Sociedade do Anel se unem a Aragorn para proteger Gondor da ameaça de Sauron.</p>
+          <span class="price quebra-linha">R$50,68</span>
+          <button class="add-to-cart" id="Senhor_dos_Aneis_O_Retorno_do_Rei">Adicionar ao Carrinho</button>
         </div>
-    </section>
+
+        
+
+        <div class="product">
+          <img src="../Livros/O Hobbit.jpeg" width="142" height="300" alt="Product 2" class="margem_topo">
+          <h3 class="title">O Hobbit</h3>
+          <p class="synopsis">Bilbo Bolseiro se junta a Thorin e outros anões em uma jornada épica para retomar Erebor do dragão Smaug, enfrentando perigos como Goblins, Orcs e a criatura Gollum, cujo anel tem um poder que moldará o destino da Terra Média.</p>
+          <span class="price quebra-linha">R$53,80</span>
+          <button class="add-to-cart" id="o_hobbit">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+          <img src="../Livros/A Queda de Númenor.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
+          <h3 class="title">A Queda de Númenor</h3>
+          <p class="synopsis">O livro narra a queda de Numenor e o surgimento da Terra-média, cenário de "O Senhor dos Anéis", com uma mistura emocionante de ação, aventura e reflexão sobre ambição, poder e redenção.</p>
+          <span class="price quebra-linha">R$36,90</span>
+          <button class="add-to-cart" id="A_Queda_de_Numenor">Adicionar ao Carrinho</button>
+        </div>
+
+      </section>
+
+    <section class="margem_lateral">
+
+      <h2 class="category-title">Sherlock Holmes</h2>
+      <div class="livros product-container">
+
+        <div class="product">
+          <img src="../Livros/Sherlock Holmes 1.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
+          <h3 class="title">Sherlock Holmes: Um estudo em vermelho</h3>
+          <p class="synopsis"> Holmes é chamado para solucionar o caso de um homem que foi encontrado morto, com uma expressão de terror, mas que não apresenta ferimentos, apenas manchas de sangue pelo corpo.</p>
+          <span class="price quebra-linha">R$38,32</span>
+          <button class="add-to-cart" id="Sherlock_Holmes_Um_estudo_em_vermelho">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+          <img src="../Livros/Sherlock Holmes - O signo dos quatro.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
+          <h3 class="title">Sherlock Holmes: O signo dos quatro</h3>
+          <p class="synopsis">Holmes é procurado por Mary Morstan para descobrir o que aconteceu com seu pai que morreu há dez anos. Começa uma investigação, e, acompanhado do dr. Watson Holmes se depara com curiosas pistas.</p>
+          <span class="price quebra-linha">R$38,32</span>
+          <button class="add-to-cart" id="Sherlock_Holmes_O_signo_dos_quatro">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+          <img src="../Livros/O Vale do Medo.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
+          <h3 class="title">Sherlock Holmes: O Vale do Medo</h3>
+          <p class="synopsis">Em "O Vale do Medo", Sherlock Holmes e Watson decifram um bilhete criptografado sobre um assassinato, iniciando uma busca pela solução do crime. A história é eletrizante, com um desfecho surpreendente.</p>
+          <span class="price quebra-linha">R$34,42</span>
+          <button class="add-to-cart" id="Sherlock_Holmes_O_Vale_do_Medo">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+          <img src="../Livros/Sherlock Holmes - O cão dos Baskerville.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
+          <h3 class="title">Sherlock Holmes: O cão dos Baskerville</h3>
+          <p class="synopsis">Holmes investiga a morte do milionário Sir Charles Baskerville que foi encontrado em um pântano próximo a sua casa. Uma lenda local dizia que ele foi assassinado por um cão que assombrava a região. Será isso mesmo?</p>
+          <span class="price quebra-linha">R$22,47</span>
+          <button class="add-to-cart" id="Sherlock_Holmes_O_cao_dos_Baskerville">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+          <img src="../Livros/As aventuras de Sherlock Holmes.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
+          <h3 class="title">As aventuras de Sherlock Holmes</h3>
+          <p class="synopsis">O volume reúne os doze primeiros contos de Sherlock Holmes, publicados entre julho de 1891 e junho de 1892 na revista Strand Magazine, incluindo histórias famosas como "A Liga dos Cabeças Vermelhas" e "Escândalo na Boêmia".</p>
+          <span class="price quebra-linha">R$21,00</span>
+          <button class="add-to-cart" id="As_aventuras_de_Sherlock_Holmes">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+
+      </div>
+
+      </section>
+
+      <section class="margem_lateral">
+
+        <h2 class="category-title">Harry Potter</h2>
+        <div class="livros product-container">
+  
+          <div class="product">
+            <img src="../Livros/Harry Potter e a Pedra Filosofal.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
+            <h3 class="title">Harry Potter e a Pedra Filosofal</h3>
+            <p class="synopsis">Harry Potter, um garoto órfão maltratado pelos tios, descobre aos 11 anos sua herança mágica e destino de enfrentar o bruxo das trevas que matou seus pais, tornando-se um símbolo de poder e resistência no mundo dos feiticeiros.</p>
+            <span class="price quebra-linha">R$38,42</span>
+            <button class="add-to-cart" id="Harry_Potter_e_a_Pedra_Filosofal">Adicionar ao Carrinho</button>
+          </div>
+  
+          <div class="product">
+            <img src="../Livros/Harry Potter e a Câmara Secreta.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
+            <h3 class="title">Harry Potter e a Câmara Secreta</h3>
+            <p class="synopsis">Harry Potter enfrenta novos desafios em seu retorno a Hogwarts após férias desanimadoras, contando com a ajuda dos amigos para enfrentar uma ameaça misteriosa que perturba a escola.</p>
+            <span class="price quebra-linha">R$36,48</span>
+            <button class="add-to-cart" id="Harry_Potter_e_a_Câmara_Secreta">Adicionar ao Carrinho</button>
+          </div>
+  
+          <div class="product">
+            <img src="../Livros/Harry Potter e o Prisioneiro de Azkaban.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
+            <h3 class="title">Harry Potter e o Prisioneiro de Azkaban</h3>
+            <p class="synopsis">Harry Potter ansioso para retornar a Hogwarts, onde encontra velhos amigos e novos desafios, incluindo a presença do misterioso professor Lupin.</p>
+            <span class="price quebra-linha">R$57,67</span>
+            <button class="add-to-cart" id="Harry_Potter_e_o_Prisioneiro_de_Azkaban">Adicionar ao Carrinho</button>
+          </div>
+  
+          <div class="product">
+            <img src="../Livros/Harry Potter e a Ordem da Fênix.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
+            <h3 class="title">Harry Potter e a Ordem da Fênix</h3>
+            <p class="synopsis">No quinto livro da saga, Harry Potter enfrenta a pressão da fama, a perseguição da imprensa e descobre mais sobre sua sexualidade enquanto enfrenta Voldemort sem a proteção de Dumbledore e desvenda segredos sobre seu pai e a perda de um ente querido.</p>
+            <span class="price quebra-linha">R$43,90</span>
+            <button class="add-to-cart" id="Harry_Potter_e_a_Ordem_da_Fênix">Adicionar ao Carrinho</button>
+          </div>
+  
+          <div class="product">
+            <img src="../Livros/Harry Potter e as Relíquias da Morte.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
+            <h3 class="title">Harry Potter e as Relíquias da Morte</h3>
+            <p class="synopsis">Descubra a jornada de Threepio até Star Wars: O Despertar da Força e como ele adquiriu seu braço vermelho. Com a equipe de James Robinson e Tony Harris, este especial é essencial para os fãs, prometendo uma narrativa única.</p>
+            <span class="price quebra-linha">R$37,90</span>
+            <button class="add-to-cart" id="Harry_Potter_e_as_Relíquias_da_Morte">Adicionar ao Carrinho</button>
+            </div>
+          </div>
+  
+        </div>
+
+      </section>
+      
+
+    
+  </main>
+
+  <footer>
+    <a href="https://www.facebook.com/profile.php?id=100051967600355" target="_blank" rel="external"><img src="../Imagens/Facebook.png" alt="ícone facebook" class="icon_facebook_01" width="20" height="20"></a>
+        <a href="" target="_blank" rel="external"><img src="../Imagens/Facebook.png" alt="ícone facebook" class="icon_facebook_02" width="20" height="20"></a>
+        <a href="https://www.instagram.com/wesley.vnascimento/" target="_blank" rel="external"><img src="../Imagens/Instagram.png" alt="ícone instagram" class="icon_instagram_01" width="20" height="20"></a>
+        <a href="https://www.instagram.com/_juuh27_/" target="_blank" rel="external"><img src="../Imagens/Instagram.png" alt="ícone instagram" class="icon_instagram_02" width="20" height="20"></a>
+        <a href="https://www.linkedin.com/in/wesley-nascimento-4022501a8/" target="_blank" rel="external"><img src="../Imagens/Linkedin.png" alt="ícone Linkedin" class="icon_linkedin_01" width="20" height="20"></a>
+        <a href="https://www.linkedin.com/in/julia-rodrigues-santos/" target="_blank" rel="external"><img src="../Imagens/Linkedin.png" alt="ícone Linkedin" class="icon_linkedin_02" width="20" height="20"></a>
+
+    <div class="copyright">
+      <p>&copy; 2024 Multiverso Nerd | Wesley Nascimento & Julia Rodrigues </p>
+    </div>
+  </footer>
+  
+  
     
     
-    <footer>
-        <p>&copy; 2024 Multiverso Nerd | Wesley Nascimento & Julia Rodrigues 
-            <a href="https://www.facebook.com/profile.php?id=100051967600355" target="_blank" rel="external"><img src="../Imagens/Facebook.png" alt="ícone facebook" class="icon_facebook_01" width="20" height="20"></a>
-            <a href="" target="_blank" rel="external"><img src="../Imagens/Facebook.png" alt="ícone facebook" class="icon_facebook_02" width="20" height="20"></a>
-            <a href="https://www.instagram.com/wesley.vnascimento/" target="_blank" rel="external"><img src="../Imagens/Instagram.png" alt="ícone instagram" class="icon_instagram_01" width="20" height="20"></a>
-            <a href="https://www.instagram.com/_juuh27_/" target="_blank" rel="external"><img src="../Imagens/Instagram.png" alt="ícone instagram" class="icon_instagram_02" width="20" height="20"></a>
-        </p>
-    </footer>
-    
-    <script src="../JavaScript/index.js"></script>
-    
+</footer>
 </body>
+
 </html>

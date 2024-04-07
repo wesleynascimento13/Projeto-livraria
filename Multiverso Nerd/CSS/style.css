@@ -1,0 +1,485 @@
+
+
+body {
+  font-family: Arial, sans-serif; /* Define a fonte padrão para o corpo do documento */
+  margin: 0px; /* Remove margens externas */
+  padding: 0; /* Remove preenchimento */
+  margin-bottom: 100px; /* Adiciona margem inferior de 100 pixels */
+  background-color: #bfeef3;
+  color: black; /* Define a cor do texto como preto */
+  font-size: 15px; /* Define o tamanho da fonte para 16 pixels */
+  
+}
+
+
+header {
+  background-color:rgb(166, 5, 5); /* Define a cor de fundo */
+  color: #fff; /* Define a cor do texto */
+  padding: 1px; /* Adiciona preenchimento */
+  text-align: center; /* Centraliza o texto */
+}
+
+header nav ul {
+  list-style: none; /* Remove os estilos padrão da lista */
+  padding: 0; /* Remove preenchimento da lista */
+}
+
+header nav ul li {
+  display: inline; /* Exibe os itens da lista em linha */
+  margin-right: 20px; /* Adiciona margem direita entre os itens */
+}
+
+header nav ul li a {
+  color: #fff; /* Define a cor do link */
+  text-decoration: none; /* Remove a decoração de link */
+}
+
+/* Estilos para os produtos */
+.product {
+  border: 1px solid #000000; /* Adiciona uma borda sólida */
+  padding: 0px; /* Remove preenchimento interno */
+  width: 260px; /* Define a largura dos produtos */
+  height: 550px; /* Define a altura dos produtos */
+  display: flex; /* Define o layout flexível */
+  flex-direction: column; /* Define a direção dos itens flexíveis */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  text-align: center; /* Centraliza o texto */
+  min-height: 510px; /* Define a altura mínima */
+  max-height: 510px
+}
+
+.product img {
+  max-width: 100%; /* Define a largura máxima da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.price {
+  font-weight: bold; /* Define o peso da fonte */
+  color: rgb(198, 10, 10); /* Define a cor do preço */
+}
+
+.add-to-cart {
+  background-color:rgb(198, 10, 10); /* Define a cor de fundo do botão */
+  color: #fff; /* Define a cor do texto do botão */
+  border: none; /* Remove a borda do botão */
+  padding: 8px 16px; /* Adiciona preenchimento ao botão */
+  cursor: pointer; /* Adiciona o cursor de apontar */
+}
+
+.add-to-cart:hover {
+  background-color: #800000; /* Define a cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Estilos para rótulos e inputs */
+label {
+  display: block; /* Exibe os rótulos como blocos */
+  margin-bottom: 5px; /* Adiciona margem inferior aos rótulos */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%; /* Define a largura total */
+  padding: 8px; /* Adiciona preenchimento */
+  margin-bottom: 10px; /* Adiciona margem inferior */
+  border: 1px solid #ccc; /* Adiciona uma borda */
+}
+
+button[type="submit"] {
+  background-color: rgb(198, 10, 10); /* Define a cor de fundo do botão de envio */
+  color: #fff; /* Define a cor do texto do botão */
+  border: none; /* Remove a borda do botão */
+  padding: 8px 16px; /* Adiciona preenchimento ao botão */
+  cursor: pointer; /* Adiciona o cursor de apontar */
+}
+
+button[type="submit"]:hover {
+  background-color: #800000; /* Define a cor de fundo ao passar o mouse sobre o botão de envio */
+}
+
+
+/* Estilos adicionais */
+.header {
+  align-items: center; /* Centraliza os itens verticalmente */
+  width: 100%; /* Define a largura total */
+}
+
+.categories {
+  margin-right: 400px; /* Adiciona margem direita */
+}
+
+.store-name {
+  margin-right: 20px; /* Adiciona margem direita */
+}
+
+.navigation {
+  margin-left: auto; /* Alinha à direita */
+}
+
+.quebra-linha {
+  white-space: pre-line; /* Mantém quebras de linha */
+  line-height: 1; /* Define a altura da linha */
+}
+
+.contact-section {
+  float: right;
+  margin-right: 10px; /* Reduz a margem direita */
+  padding: 30px; /* Reduz o preenchimento */
+}
+
+.container {
+  max-width: 600px; /* Define a largura máxima */
+  margin: 15px auto; /* Adiciona margem */
+  padding: 2px; /* Adiciona preenchimento */
+  background-color: #fff; /* Define a cor de fundo */
+  border-radius: 5px; /* Adiciona borda arredondada */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+  max-height: 600px;
+}
+
+h1 {
+  text-align: center; /* Centraliza o texto */
+}
+
+.product-section {
+  flex-wrap: wrap; /* Permite que os itens flexíveis quebrem linha quando não couberem no contêiner */
+  justify-content: space-between; /* Distribui uniformemente os itens ao longo do eixo principal */
+}
+
+.product-container {
+  display: grid; /* Define um layout de grade */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Cria colunas com tamanho mínimo de 250px e tamanho máximo de 1 fração do contêiner */
+  grid-gap: 10px; /* Define o espaçamento entre as células da grade */
+}
+
+.product h3 {
+  margin-top: 20px; /* Adiciona margem superior */
+}
+
+.product p {
+  margin: 0px 0; /* Remove margens superior e inferior */
+  flex-grow: 1; /* Permite que o parágrafo cresça para preencher o espaço disponível */
+}
+
+#form-container {
+  margin-bottom: 20px; /* Adiciona margem inferior */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Adiciona margem inferior */
+}
+
+.form-group label {
+  display: block; /* Exibe os rótulos como blocos */
+  margin-bottom: 5px; /* Adiciona margem inferior */
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 97%;
+  padding: 5px; /* Reduz o preenchimento para ajustar ao novo tamanho da fonte */
+  margin-top: 1px;
+  margin-bottom: 1px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 14px; /* Define o tamanho da fonte para 14 pixels */
+  height: 30px; /* Reduz a altura da caixa de texto */
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px; /* Define o tamanho da fonte para 14 pixels */
+}
+
+#response-message {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 14px; /* Define o tamanho da fonte para 14 pixels */
+}
+
+.horizontal_vertical{
+  overflow: hidden;
+}
+
+.horizontal{
+  overflow-x: hidden;
+}
+/* Estilos para o rodapé */
+footer {
+  background-color: rgb(166, 5, 5); /* Define a cor de fundo do rodapé */
+  color: #fff; /* Define a cor do texto */
+  margin-top: 93px; /* Adiciona margem superior */
+  margin-bottom: -150px; /* Adiciona margem superior */
+  width: 100%; /* Define a largura total */
+  height: 3vh
+}
+
+.icon_instagram_01 {
+  margin-right: 4px; /* Adicione um espaçamento entre as imagens se necessário */
+  
+  float: right;
+}
+.icon_instagram_02 {
+  margin-right: 5px; /* Adicione um espaçamento entre as imagens se necessário */
+  float: right;
+}
+
+.icon_facebook_01 {
+  margin-right:30px;
+  float: right;
+}
+.icon_facebook_02 {
+  margin-right: 5px;
+  float: right;
+}
+
+.icon_linkedin_01 {
+  margin-right: 5px;
+  float: right;
+}
+.icon_linkedin_02 {
+  margin-right: 5px;
+  float: right;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Centraliza o parágrafo */
+p {
+  margin: 0;
+}
+
+/* Centraliza o parágrafo dentro da div */
+.copyright {
+  text-align: center;
+  margin-left: 175px;
+}
+
+
+.search-container {
+  float: right; /* Posiciona o contêiner à direita */
+  margin-right: 20px; /* Adiciona uma margem direita para espaçamento */
+}
+
+.search-container input[type=text] {
+  padding: 0px;
+  width: 50%;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.search-container button {
+  padding: 0px 0px;
+  background-color: #bfeef3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 0px;
+  display: inline-block;
+  margin-top: 1px;
+}
+.margem_lateral{
+  margin: 30px;
+}
+.margem_topo{
+margin-top: 20px;
+}
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+  .product {
+      /* Redefinindo as propriedades de layout */
+      display: block; /* Altera para layout de bloco */
+      width: 100%; /* Ocupa toda a largura disponível */
+      height: auto; /* Altura automática para acomodar o conteúdo */
+      margin-bottom: 20px; /* Espaçamento entre os produtos */
+      border: 1px solid #000000; /* Adiciona uma borda sólida */
+      min-height: 500px; /* Define a altura mínima */
+      max-height: 600px;
+      box-sizing: border-box; /* Faz com que a largura e a altura incluam preenchimento e borda */
+      padding: 30px; /* Define o preenchimento interno */
+  }
+  
+  .horizontal_vertical{
+      overflow-x: hidden; /* remova a propriedade overflow: hidden */
+      overflow-y: auto; /* adicione overflow-y: auto; isso permitirá a barra de rolagem vertical */
+  }
+  header {
+      background-color:rgb(166, 5, 5); /* Define a cor de fundo */
+      color: #fff; /* Define a cor do texto */
+      padding: 1px; /* Adiciona preenchimento */
+      text-align: center; /* Centraliza o texto */
+  }
+  footer {
+      font-size: 10px; /* Define o tamanho da fonte para 16 pixels */
+      margin-top: 1px;
+      height: 4vh
+     
+  }
+  .icon_instagram_01 {
+      margin-right: 5px; /* Adicione um espaçamento entre as imagens se necessário */
+      
+      float: right;
+  }
+  .icon_instagram_02 {
+      margin-right: 5px; /* Adicione um espaçamento entre as imagens se necessário */
+      float: right;
+  }
+  
+  .icon_facebook_01 {
+     
+      float: right;
+  }
+  .icon_facebook_02 {
+      margin-right: 5px;
+      float: right;
+  }
+  .copyright {
+    text-align: center;
+    margin-left: 1px;
+    font-size: 9px;
+  }
+}
+
+.icon_linkedin_01 {
+  margin-right: 5px;
+  float: right;
+}
+.icon_linkedin_02 {
+  margin-right: 5px;
+  float: right;
+}
+
+
+#modal {
+  width: 80%;
+  border: black solid 5px;
+  background-color: white;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 3;
+}
+
+#modal.hide,
+#fade.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#tela-pedidos {
+  height: 50vh;
+}
+
+#tela-pedidos h2 {
+  display: inline-block;
+}
+
+#fechar-modal {
+  width: 2em;
+  cursor: pointer;
+}
+
+#pedidos {
+  margin-top: 10px;
+  font-size: 1.5em;
+  overflow: auto;
+  height: 80%;
+}
+
+
+
+#valor-total p {
+  font-size: 1.3em;
+  padding: 10px;
+}
+
+#btn-pagar button {
+  margin-top: 1em;
+  margin-left: 1em;
+  padding: 10px;
+  font-size: 1.3em;
+  background-color: var(--cor-button);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  float: right;
+  cursor: pointer;
+}
+#pedidos {
+
+  font-size: 1em;
+  height: 75%;
+}
+.comprar button,
+.comprar input {
+padding: 5px;
+font-size: 1.3em;
+color: white;
+border: none;
+background-color: var(--cor-button);
+border-radius: 5px;
+}
+
+.comprar button:hover {
+cursor: pointer;
+background-color: #fff;
+color: var(--cor-button);
+}
+
+.comprar button {
+width: 100%;
+
+}
+
+#fade,
+#modal {
+opacity: 1;
+transition: .5s;
+}
+
+#fade {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(51, 51, 51, 0.7);
+z-index: 2;
+}
+
+:root {
+--cor-navbar: #e2ff9f;
+--cor-button: #ade528;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.category-title{
+  margin-bottom: 10px;
+}
+
+
+
+
