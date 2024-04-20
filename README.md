@@ -1,2 +1,2 @@
-# Trabalho-de-Web
+# Projeto-livraria
 Projeto de livraria Nerd.
