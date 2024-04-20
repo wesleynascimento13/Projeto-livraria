@@ -2,8 +2,10 @@ INSERT INTO Categoria (nome_categoria, descricao_categoria)
 VALUES
     ('Ficção Científica', 'Livros que exploram temas de ficção científica e futurismo.'),
     ('Romance', 'Livros que narram histórias de amor e relacionamentos.'),
-    ('Fantasia', 'Livros que apresentam elementos de fantasia e magia.');
-    
+    ('Fantasia', 'Livros que apresentam elementos de fantasia e magia.'),
+    ('Suspense', 'Livros que mantêm os leitores ansiosos para descobrir o que acontecerá em seguida.'),
+    ('Aventura', 'Livros que envolvem viagens emocionantes, descobertas e desafios.');
+
     INSERT INTO Cliente (nome, data_nascimento) 
 VALUES
     ('João Silva', '1990-05-15'),
@@ -30,18 +32,19 @@ VALUES
     ('Carlos Santos', 'carlos@email.com'),
     ('Juliana Oliveira', 'juliana@email.com');
 
-INSERT INTO Multa (id_leitor, id_emprestimo_associado, valor_multa, data_vencimento_multa, status_multa)
-VALUES
-    (1, 1, 10, '2024-05-15', 1),
-    (2, 2, 15, '2024-05-20', 1),
-    (3, 3, 20, '2024-05-25', 1);
 
 INSERT INTO Emprestimo (id_leitor, status_emprestimo)
 VALUES
     (1, 'Ativo'),
     (2, 'Ativo'),
     (3, 'Ativo');
-    
+   
+ INSERT INTO Multa (id_leitor, id_emprestimo_associado, valor_multa, data_vencimento_multa, status_multa)
+VALUES
+    (1, 1, 10, '2024-05-15', 1),
+    (2, 2, 15, '2024-05-20', 1),
+    (3, 3, 20, '2024-05-25', 1);
+ 
 INSERT INTO Livro (id_livro_categoria, id_livro_autor, id_editora, titulo_livro, isbn, numero_paginas, ano_publicacao, resumo_livro) 
 VALUES
     (1, 1, 1, 'Dom Casmurro', '9788589390120', 256, 1899, 'Dom Casmurro é um dos grandes clássicos da literatura brasileira, escrito por Machado de Assis.'),
@@ -50,24 +53,12 @@ VALUES
     (1, 4, 3, 'Harry Potter e a Pedra Filosofal', '9788532530846', 288, 1997, 'Harry Potter e a Pedra Filosofal é o primeiro livro da série de fantasia escrita por J.K. Rowling.'),
     (2, 5, 3, 'Cem Anos de Solidão', '9788535908338', 448, 1967, 'Cem Anos de Solidão é um romance do escritor colombiano Gabriel García Márquez, que narra a história da família Buendía em Macondo.');
 
-INSERT INTO `cmo`.`Livro` (`id_livro`) VALUES ('1');
-INSERT INTO `cmo`.`Livro` (`id_livro`) VALUES ('2');
-INSERT INTO `cmo`.`Livro` (`id_livro`) VALUES ('3');
-INSERT INTO `cmo`.`Livro` (`id_livro`) VALUES ('4');
-INSERT INTO `cmo`.`Livro` (`id_livro`) VALUES ('5');
-
-INSERT INTO `cmo`.`Categoria` (`id_categoria`) VALUES ('1');
-INSERT INTO `cmo`.`Categoria` (`id_categoria`) VALUES ('2');
-INSERT INTO `cmo`.`Categoria` (`id_categoria`) VALUES ('3');
-INSERT INTO `cmo`.`Categoria` (`id_categoria`) VALUES ('4');
-INSERT INTO `cmo`.`Categoria` (`id_categoria`) VALUES ('5');
-
 INSERT INTO ItensEmprestimo (id_emprestimo, id_livro_emprestado, data_emprestimo, data_devolucao_esperada)
 VALUES
     (1, 1, '2024-04-13', '2024-04-27'),
     (2, 2, '2024-04-13', '2024-04-27'),
     (3, 3, '2024-04-13', '2024-04-27');
-
+    
 INSERT INTO LivroPorCategoria (id_livro, id_categoria)
 VALUES
     (1, 1),
@@ -75,6 +66,10 @@ VALUES
     (3, 3),
     (4, 4),
     (5, 5);
+
+
+
+
 
 
 
