@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    <title>Multiverso Nerd</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+  <script src="../JavaScript/script4.js" defer></script>
+</head>
+
+<body id="start" class="horizontal_vertical">
+
+  <div id="fade" class="hide"></div>
+  <div id="modal" class="hide">
+    <div id="tela-pedidos">
+      <h2>PRODUTOS</h2>
+      <img src="images/close-icon.png" alt="" id="fechar-modal">
+      <br>
+      <hr>
+      <div id="pedidos"></div>
+    </div>
+    <hr>
+    <div id="valor-total">
+      <p>Total :</p>
+    </div>
+    <hr>
+    <div id="btn-pagar">
+      <button id="btn-limpar">Limpar</button>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="title-and-nav">
+      <br>
+        <h1 class="store-name">Multiverso Nerd</h1>
+        <br>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#start">Home</a></li>
+                <li><a href="livros.html">Livros</a></li>
+                <li><a href="quadrinhos.html">Quadrinhos</a></li>
+                <li><a href="#" id="abrir-modal">Carrinho</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Pesquisar...">
+  <button id="botaoPesquisar" onclick="search()">
+      <img src="../Imagens/lupa de pesquisa.png" width="20" height="20" alt="Pesquisar">
+  </button>
+</div>
+
+  <main>
+
+    <section class="margem_lateral">
+      <h2 class="category-title">Mais Vendidos</h2>
+
+      <div class="livros product-container">
+
+        <div class="product">
+          <img src="../Livros/Harry Potter e as Relíquias da Morte.jpg" width="142" height="300" alt="Product 1" class="margem_topo">
+          <h3 class="title">Harry Potter e as Relíquias da Morte</h3>
+          <p class="synopsis">Em "Harry Potter e as Relíquias da Morte", Harry busca e destrói as Horcruxes de Voldemort com a ajuda de seus amigos, enquanto descobre e utiliza as Relíquias da Morte para enfrentar o lorde das trevas.</p>
+          <span class="price quebra-linha">R$37,90</span>
+          <button class="add-to-cart" id="Harry_Potter_e_as_Relíquias_da_Morte">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+          <img src="../Quadrinhos/DC/superman-entre-a-foice-e-o-martelo.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
+          <h3 class="title">Superman entre a foice e o martelo</h3>
+          <p class="synopsis"> "Superman: Red Son" reimagina Kal-El como um herói comunista na União Soviética, enfrentando versões alternativas de heróis e líderes políticos em uma minissérie aclamada e republicada pela Panini no Brasil.</p>
+          <span class="price quebra-linha">R$62,90</span>
+          <button class="add-to-cart" id="Superman_Entre_a_Foice_e_o_Martelo">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+          <img src="../Quadrinhos/Star Wars/Star Wars  C-3PO.png" width="130" height="300" alt="Product 2" class="margem_topo">
+          <h3 class="title">Star Wars C-3PO</h3>
+          <p class="synopsis">Descubra a jornada de Threepio até Star Wars: O Despertar da Força e como ele adquiriu seu braço vermelho. Com a equipe de James Robinson e Tony Harris, este especial é essencial para os fãs, prometendo uma narrativa única.</p>
+          <span class="price quebra-linha">R$7,90</span>
+          <button class="add-to-cart" id="Star_Wars_C-3PO">Adicionar ao Carrinho</button>
+        </div>
+
+      
+        <div class="product">
+          <img src="../Livros/a sociedade do anel capa os aneis de poder.jpg" width="130" height="300" alt="Product 2" class="margem_topo">
+          <h3 class="title">Senhor dos Anéis: A Sociedade do Anel</h3>
+          <p class="synopsis">A jornada da Sociedade do Anel começa no Condado, quando Frodo Bolseiro herda o Um Anel de seu tio Bilbo. Eles embarcam em uma perigosa missão para destruir o anel e derrotar Sauron, unindo-se a outros representantes dos Povos Livres.</p>
+          <span class="price quebra-linha">R$32,90</span>
+          <button class="add-to-cart" id="Senhor_dos_aneis_A_Sociedade_do_Anel">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+          <img src="../Livros/As aventuras de Sherlock Holmes.jpg" width="142" height="300" alt="Product 2" class="margem_topo">
+          <h3 class="title">As aventuras de Sherlock Holmes</h3>
+          <p class="synopsis">O volume reúne os doze primeiros contos de Sherlock Holmes, publicados entre julho de 1891 e junho de 1892 na revista Strand Magazine, incluindo histórias famosas como "A Liga dos Cabeças Vermelhas" e "Escândalo na Boêmia".</p>
+          <span class="price quebra-linha">R$21,00</span>
+          <button class="add-to-cart" id="As_aventuras_de_Sherlock_Holmes">Adicionar ao Carrinho</button>
+        </div>
+
+      </section>
+
+
+    
+  </main>
+
+  <footer>
+    <a href="https://www.facebook.com/profile.php?id=100051967600355" target="_blank" rel="external"><img src="../Imagens/Facebook.png" alt="ícone facebook" class="icon_facebook_01" width="20" height="20"></a>
+        <a href="https://www.facebook.com/profile.php?id=100007447209071" target="_blank" rel="external"><img src="../Imagens/Facebook.png" alt="ícone facebook" class="icon_facebook_02" width="20" height="20"></a>
+        <a href="https://www.instagram.com/wesley.vnascimento/" target="_blank" rel="external"><img src="../Imagens/Instagram.png" alt="ícone instagram" class="icon_instagram_01" width="20" height="20"></a>
+        <a href="https://www.instagram.com/_juuh27_/" target="_blank" rel="external"><img src="../Imagens/Instagram.png" alt="ícone instagram" class="icon_instagram_02" width="20" height="20"></a>
+        <a href="https://www.linkedin.com/in/wesley-nascimento-4022501a8/" target="_blank" rel="external"><img src="../Imagens/Linkedin.png" alt="ícone Linkedin" class="icon_linkedin_01" width="20" height="20"></a>
+        <a href="https://www.linkedin.com/in/julia-rodrigues-santos/" target="_blank" rel="external"><img src="../Imagens/Linkedin.png" alt="ícone Linkedin" class="icon_linkedin_02" width="20" height="20"></a>
+
+    <div class="copyright">
+      <p>&copy; 2024 Multiverso Nerd | Wesley Nascimento & Julia Rodrigues </p>
+    </div>
+  </footer>
+  
+  
+    
+    
+</footer>
+</body>
+
+</html>
